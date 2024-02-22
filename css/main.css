@@ -21,12 +21,14 @@ section > div:nth-child(1) {
 section .box {
   background: #fff;
   width: 50%;
+  height: 400px;
   border-radius: 15px;
   border: 3px double rgb(39, 37, 37);
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-top: 20px;
 }
 section .box .buttons {
@@ -34,7 +36,7 @@ section .box .buttons {
   margin-bottom: 20px;
 }
 section .box .buttons div {
-  font-size: 20px;
+  font-size: 30px;
   color: #fff;
   background: rgb(59, 58, 58);
   padding: 10px;
@@ -65,20 +67,40 @@ section .box .buttons div:active {
   box-shadow: 0 0 20px rgba(66, 65, 65, 0.842);
   color: bisque;
 }
+section .box .buttons .activated {
+  background: rgb(122, 96, 96);
+  border: 2px solid rgb(76, 75, 75);
+  z-index: 5;
+}
 
 section .box > div:first-child {
   font-size: 400%;
   font-weight: 500;
   margin: 20px 0;
   color: rgb(59, 58, 58);
+  text-align: center;
+  justify-content: center;
+}
+.box .output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
 }
 @media screen and (orientation: portrait) and (max-width: 500px) {
+  section .box {
+    height: 400px;
+  }
   section .box .buttons {
     flex-direction: column;
   }
   section > div:nth-child(1) {
     font-size: 40px;
     margin-bottom: 30px;
+  }
+  section .box > div:first-child {
+    font-size: 350%;
   }
 }
 @media screen and (orientation: portrait) and (max-width: 1100px) {
@@ -88,9 +110,18 @@ section .box > div:first-child {
   section > div:nth-child(1) {
     margin-bottom: 30px;
   }
+  /* section .box {
+    height: 40%;
+  } */
 }
 @media screen and (orientation: landscape) and (min-width: 500px) {
   section .box {
     width: 75%;
+  }
+  section .box > div:first-child {
+    margin: 5px 0;
+  }
+  section .box {
+    padding: 4px;
   }
 }
